@@ -1,0 +1,9 @@
+Tradme:
+  filter: "project=Trademe"
+  subsections:
+    - Bugs:
+        filter: "type=Bug"
+    - Stories:
+        filter: "type=Story"
+Demo:
+  filter: "project=DEMO"

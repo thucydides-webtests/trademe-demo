@@ -1,0 +1,4 @@
+Searching for Listings
+In order to find objects that I am looking for
+As a buyer 
+I want to search for objects whose title or description contains certain keywords

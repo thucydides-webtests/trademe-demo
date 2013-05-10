@@ -1,0 +1,4 @@
+Browsing by Category
+In order to view items that might interest me but that don't have a keyword that I thought of
+As a buyer
+I want to browse through items in categories that interest me

@@ -1,0 +1,4 @@
+Browsing listings
+In order to find objects that I want to purchase
+As a buyer
+I want to view available listings that I might be interested in purchasing

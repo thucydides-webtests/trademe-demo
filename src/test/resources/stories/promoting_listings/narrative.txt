@@ -1,0 +1,4 @@
+Promoting listings
+In order to sell more stuff faster
+As the site administrator
+I want buyers to be informed about items they might like without having to look for them
