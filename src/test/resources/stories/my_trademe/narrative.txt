@@ -1,0 +1,4 @@
+My Trademe
+In order to increase client loyalty
+As the site owner
+I want users to be able to have a personalized browsing experience

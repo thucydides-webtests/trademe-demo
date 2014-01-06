@@ -10,7 +10,7 @@ import net.thucydides.demo.trademe.pages.SearchPage;
 
 import static org.fest.assertions.Assertions.assertThat;
 
-public class SearchSteps {
+public class SearchScenarioSteps {
 
     SearchPage searchPage;
     ResultsPage resultsPage;
@@ -22,13 +22,13 @@ public class SearchSteps {
     }
 
 
-    @When("I search for listings relating to '$keyword'")
+    @When("I search for listings relating to '$keywords'")
     public void searchForListingsRelatingTo(String keywords) {
         resultsPage = searchPage.searchFor(keywords);
     }
 
-    @When("I search for listings relating to <keyword> in the <category> category (<options>)")
-    public void searchByCategory(String keyword, String options, String category) {
+    @When("I search for listings relating to <keyword> in the <category> category")
+    public void searchByCategory(String keyword, String category) {
         resultsPage = searchPage.selectsCategory(category).searchFor(keyword);
     }
 

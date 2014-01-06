@@ -11,9 +11,9 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <thucydides.version>0.9.125</thucydides.version>
-        <thucydides.jbehave.version>0.9.125</thucydides.jbehave.version>
-        <thucydides.jira.version>0.9.125</thucydides.jira.version>
+        <thucydides.version>0.9.229</thucydides.version>
+        <thucydides.jbehave.version>0.9.229</thucydides.jbehave.version>
+        <thucydides.jira.version>0.9.228</thucydides.jira.version>
         <webdriver.driver>firefox</webdriver.driver>
     </properties>
 
@@ -37,11 +37,6 @@
             <groupId>net.thucydides.plugins.jira</groupId>
             <artifactId>thucydides-jira-plugin</artifactId>
             <version>${thucydides.jira.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>net.thucydides.maven.plugins</groupId>
-            <artifactId>thucydides-dashboard-maven-plugin</artifactId>
-            <version>${thucydides.version}</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -72,8 +67,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.3.2</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.6</source>
+                    <target>1.6</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -126,7 +121,7 @@
             <plugin>
                 <groupId>net.thucydides.maven.plugins</groupId>
                 <artifactId>thucydides-dashboard-maven-plugin</artifactId>
-                <version>0.9.123-1-SNAPSHOT</version>
+                <version>0.9.212-SNAPSHOT</version>
                 <executions>
                     <execution>
                         <id>thucydides-reports</id>

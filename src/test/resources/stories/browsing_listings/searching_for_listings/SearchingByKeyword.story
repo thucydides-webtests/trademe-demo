@@ -2,7 +2,6 @@ Searching by keyword
 
 Meta:
 @issue TRAD-2
-@tags size:big
 
 Narrative:
 In order to find objects that I am looking for

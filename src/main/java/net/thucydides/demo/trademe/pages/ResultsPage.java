@@ -11,7 +11,7 @@ import java.util.List;
 import static org.fest.assertions.Assertions.assertThat;
 
 
-public class ResultsPage extends PageObject {
+public class ResultsPage extends TrademePage {
 
     @FindBy(css = ".listingTitle")
     List<WebElement> titleElements;
@@ -21,7 +21,7 @@ public class ResultsPage extends PageObject {
     }
 
     public List<String> getAdTitles() {
-        List<String> titles = new ArrayList<>();
+        List<String> titles = new ArrayList<String>();
         for(WebElement titleElement : titleElements) {
             titles.add(titleElement.getText());
         }

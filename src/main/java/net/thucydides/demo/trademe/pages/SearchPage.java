@@ -2,17 +2,22 @@ package net.thucydides.demo.trademe.pages;
 
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
+import net.thucydides.core.pages.WebElementFacade;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import net.thucydides.demo.trademe.model.Deal;
 
 import java.util.List;
 
+import static org.hamcrest.Matchers.containsString;
+import static org.junit.Assert.assertThat;
+
 @DefaultUrl("http://www.trademe.co.nz")
-public class SearchPage extends PageObject {
+public class SearchPage extends TrademePage {
 
     @FindBy(id = "searchString")
     WebElement searchField;
@@ -45,7 +50,8 @@ public class SearchPage extends PageObject {
         return switchToPage(ResultsPage.class);
     }
 
-    public SearchPage selectsCategory(String category) {
+    public SearchPage
+    selectsCategory(String category) {
         categoriesList.findElement(By.linkText(category)).click();
         return this;
     }
@@ -59,10 +65,15 @@ public class SearchPage extends PageObject {
     }
 
     public List<Deal> getTreatMeDeals() {
+        getDriver().findElement(By.name("clientList")).click();
         return treatMeDeals.getDeals();
     }
 
     public Boolean dailyDealsDoesNotHaveDuplicates() {
         return null;
+    }
+
+    public void selectFeaturedItem(int itemNumber) {
+        findAll(".listing-content").get(itemNumber - 1).then().click();
     }
 }

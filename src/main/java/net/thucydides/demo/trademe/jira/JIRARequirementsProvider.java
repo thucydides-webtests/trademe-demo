@@ -4,10 +4,12 @@ import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
+import net.thucydides.core.guice.Injectors;
 import net.thucydides.core.model.TestOutcome;
 import net.thucydides.core.model.TestTag;
 import net.thucydides.core.requirements.RequirementsTagProvider;
 import net.thucydides.core.requirements.model.Requirement;
+import net.thucydides.core.util.EnvironmentVariables;
 import net.thucydides.plugins.jira.client.SOAPSession;
 import net.thucydides.plugins.jira.service.JIRAConfiguration;
 import net.thucydides.plugins.jira.service.JIRAConnection;
@@ -32,7 +34,7 @@ public class JIRARequirementsProvider implements RequirementsTagProvider {
     private final TypeMap typeMap;
 
     public JIRARequirementsProvider() {
-        this(new SystemPropertiesJIRAConfiguration());
+        this(new SystemPropertiesJIRAConfiguration(Injectors.getInjector().getInstance(EnvironmentVariables.class)));
     }
 
     public JIRARequirementsProvider(JIRAConfiguration jiraConfiguration) {
